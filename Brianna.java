@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Brianna {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		File brianna = new File("D:\\Eclipse\\eclipse_workspace\\UIL Scanner Labs\\src\\brianna.dat");
+		File brianna = new File("./brianna.dat");
 		Scanner file = new Scanner(brianna);
 		int min = file.nextInt();
 		int max = file.nextInt();
