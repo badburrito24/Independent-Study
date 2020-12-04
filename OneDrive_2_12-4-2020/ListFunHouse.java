@@ -15,7 +15,7 @@ public class ListFunHouse {
 	}
 
 	// this method will return the number of nodes present in list
-	public static int nodeCnt(ListNode list) {
+	public static int nodeCount(ListNode list) {
 		// iterative approach
 		int cnt = 0;
 		while (list != null) {
@@ -29,7 +29,7 @@ public class ListFunHouse {
 	// this method will create a new node with the same value as the first node and
 	// add this
 	// new node to the list. Once finished, the first node will occur twice.
-	public static void doubleTheFirst(ListNode list) {
+	public static void doubleFirst(ListNode list) {
 		list.setNext(new ListNode(list.getValue(), list.getNext()));
 
 	}
@@ -37,7 +37,7 @@ public class ListFunHouse {
 	// this method will create a new node with the same value as the last node and
 	// add this
 	// new node at the end. Once finished, the last node will occur twice.
-	public static void doubleTheLast(ListNode list) {
+	public static void doubleLast(ListNode list) {
 		while (list != null && list.getNext() != null) {
 			list = list.getNext();
 		}
