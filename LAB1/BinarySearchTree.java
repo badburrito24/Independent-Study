@@ -1,8 +1,4 @@
-//© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -  
-//Class - 
-//Lab  -
+package LAB1;
 
 import java.util.Queue;
 import java.util.LinkedList;
@@ -228,97 +224,6 @@ public class BinarySearchTree
 		}
 		return false;
 	}
-
-	public void remove(Comparable val)
-	{
-		root = remove(val, root);
-	}
-
-	private TreeNode remove(Comparable val, TreeNode tree)
-	{
-		if(tree != null)
-		{
-			int dirTest = val.compareTo(tree.getValue());
-
-			if (dirTest < 0)
-				tree.setLeft(remove(val, tree.getLeft()));
-			else if (dirTest > 0)
-				tree.setRight(remove(val, tree.getRight()));
-			else
-			{
-				if(tree.getRight()==null)
-				{
-					tree = tree.getLeft();
-				}
-				else
-				{
-					TreeNode successor = getSmallest(tree.getRight());
-					tree.setValue(successor.getValue());
-					tree.setRight(remove(successor.getValue(), tree.getRight()));
-				}
-			}
-		}
-		return tree;
-	}
-	
-	public Comparable getSmallest()
-	{
-		return getSmallest(root).getValue();
-	}
-	
-	private TreeNode getSmallest(TreeNode tree)
-	{
-		if(tree!=null)
-	   {
-	   	if(tree.getLeft()!=null)
-	   	   return getSmallest(tree.getLeft());
-	   	else
-	   	   return tree;
-	   }	
-	   
-	   //iterative version
-	   /*
-	   if(tree!=null)
-	   {
-	      while(tree.getLeft()!=null)
-	      {
-	         tree=tree.getLeft();		 
-	      }
-	      return tree;
-	   } 
-	   */
-	   return null;
-	}
-
-	public Comparable getLargest()
-	{
-		return getLargest(root).getValue();
-	}
-	
-	private TreeNode getLargest(TreeNode tree)
-	{
-		if(tree!=null)
-	   {
-	   	if(tree.getRight()!=null)
-	   	   return getLargest(tree.getRight());
-	   	else
-	   	   return tree;
-	   }	
-	   
-	   //iterative version
-	   /*
-	   if(tree!=null)
-	   {
-	      while(tree.getRight()!=null)
-	      {
-	         tree=tree.getRight();		 
-	      }
-	      return tree;
-	   } 
-	   */
-	   return null;		
-	}
-
 
 	public String toString()
 	{
