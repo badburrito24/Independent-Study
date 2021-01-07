@@ -1,3 +1,5 @@
+package LAB1;
+
 //© A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -  
@@ -43,44 +45,7 @@ public class BSTreeRunner
 
 		out.println(tree.isFull()?"\nThe tree is full.":"\nThe tree is not full.");
 		
-		out.println("\n\n\nBONUS SECTION");
-		
-		out.println(tree.search(100)?"The tree contains 100!":"The does not contain 100!");
-		
-		out.println(tree.search(114)?"The tree contains 114!":"The does not contain 114!");
-		
-		out.println("The smallest tree node " + tree.getSmallest());
-		
-		out.println("The largest tree node " + tree.getLargest());
-		
-		out.println("\n\n\nTree before removing any nodes - using level order traversal.");
-		tree.levelOrder();
-		
-		tree.remove(90);
-		out.println("\nTree after removing 90.");
-		tree.levelOrder();
-		
-		tree.remove(70);
-		out.println("\nTree after removing 70.");
-		tree.levelOrder();
-				
-		tree.remove(85);
-		out.println("\nTree after removing 85.");
-		tree.levelOrder();
-		
-		tree.remove(98);
-		out.println("\nTree after removing 98.");
-		tree.levelOrder();
-		
-		tree.remove(80);
-		out.println("\nTree after removing 80.");
-		tree.levelOrder();
-				
-		tree.remove(120);	
-		out.println("\nTree after removing 120.");
-		tree.levelOrder();
-				
-		tree.remove(100);						
-		out.println("\nTree after removing 100.");
-		tree.levelOrder();	}
+
+
+}
 }
